@@ -1,12 +1,13 @@
 import React from 'react'
 
 const App = () => {
-    return (
-        <div>
-            <h1 className="text-3xl font-bold underline">
-                Hello world!
-            </h1></div>
-    )
+  return (
+    <div>
+       <h1 classNo="text-3xl font-bold underline">
+    Hello world!
+  </h1>
+    </div>
+  )
 }
 
-export default App   
+export default App
