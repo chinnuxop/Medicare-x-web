@@ -1,9 +1,8 @@
-import React, { useRef, useState } from 'react'
-import { navbarStyles } from '../assets/dummyStyles'
-import { Link, useLocation, useNavigate } from 'react-router-dom'
-import { useClerk } from "@clerk/clerk-react";
-import { SignedOut } from "@clerk/clerk-react";
-import { User } from 'lucide-react';
+import React, { useState, useRef } from "react";
+import { navbarStyles } from "../assets/dummyStyles";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { useClerk, SignedIn, SignedOut, UserButton } from "@clerk/clerk-react";
+import { User, Key, X, Menu } from "lucide-react";
 const STORAGE_KEY = "doctorToken_v1";
 import logo from '../assets/logo.png'
 
@@ -60,15 +59,16 @@ const Navbar = () => {
 
                         <div className={navbarStyles.desktopNav}>
                             <div className={navbarStyles.navItemsContainer}>
-                                {navItems.map((item) => {
+                            {navItems.map((item) => {
                                     const isActive = location.pathname === item.href;
-                                    return (<Link
-                                        key={item.href}
-                                        to={item.href}
-                                        className={`${navbarStyles.navItem} ${isActive ? navbarStyles.navItemActive : navbarStyles.navItemInactive}`}
-                                    >
-                                        {item.label}
-                                    </Link>
+                                    return (
+                                        <Link
+                                            key={item.href}
+                                            to={item.href}
+                                            className={`${navbarStyles.navItem} ${isActive ? navbarStyles.navItemActive : navbarStyles.navItemInactive}`}
+                                        >
+                                            {item.label}
+                                        </Link>
                                     )
                                 })}
                             </div>
@@ -83,14 +83,58 @@ const Navbar = () => {
                                         Doctor Admin
                                     </span>
                                 </Link>
+                                {/*Patient login */}
+                                <button
+                                    onClick={() => clerk.openSignIn()}
+                                    className={navbarStyles.loginButton}>
+                                    <Key className={navbarStyles.loginIcon} />
+                                    Login
+                                </button>
                             </SignedOut>
+
+                            <SignedIn>
+                                <UserButton afterSignOutUrl="/" />
+                            </SignedIn>
+
+                            {/* to toggle */}
+                            <button
+                                onClick={() => setIsOpen(!isOpen)}
+                                className={navbarStyles.mobileToggle}>
+                                {isOpen ? (
+                                    <X className={navbarStyles.toggleIcon} />
+                                ) : (
+                                    <Menu className={navbarStyles.toggleIcon} />
+                                )}
+                            </button>
                         </div>
                     </div>
-                </div>
+                    {/* mobile navigations */}
+                    {isOpen && (
+                        <div className={navbarStyles.mobileMenu}>
+                            {navItems.map((item, idx) => {
+                                const isActive = location.pathname === item.href;
 
+                                return (
+                                    <Link
+                                        key={idx}
+                                        to={item.href}
+                                        onClick={() => setIsOpen(false)}
+                                        className={`${navbarStyles.mobileMenuItem} ${isActive
+                                                ? navbarStyles.mobileMenuItemActive
+                                                : navbarStyles.mobileMenuItemInactive
+                                            }`}
+                                    >
+                                        {item.label}
+                                    </Link>
+                                );
+                            })}
+                        </div>
+                    )}
+                </div>
             </nav>
         </>
-    )
-}
+    );
+};
 
-export default Navbar
+
+export default Navbar;
