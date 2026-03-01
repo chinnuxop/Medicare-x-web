@@ -59,7 +59,7 @@ const Navbar = () => {
 
                         <div className={navbarStyles.desktopNav}>
                             <div className={navbarStyles.navItemsContainer}>
-                            {navItems.map((item) => {
+                                {navItems.map((item) => {
                                     const isActive = location.pathname === item.href;
                                     return (
                                         <Link
@@ -120,17 +120,38 @@ const Navbar = () => {
                                         to={item.href}
                                         onClick={() => setIsOpen(false)}
                                         className={`${navbarStyles.mobileMenuItem} ${isActive
-                                                ? navbarStyles.mobileMenuItemActive
-                                                : navbarStyles.mobileMenuItemInactive
+                                            ? navbarStyles.mobileMenuItemActive
+                                            : navbarStyles.mobileMenuItemInactive
                                             }`}
                                     >
                                         {item.label}
                                     </Link>
                                 );
                             })}
+
+                            <SignedOut>
+                                <Link to={`/doctor-admin/login`}
+                                    className={navbarStyles.mobileDoctorAdminButton}
+                                    onClick={() => setIsOpen(false)}>
+                                    Doctor Admin
+                                </Link>
+                            
+
+                            <div className={navbarStyles.mobileLoginContainer}>
+                                <button onClick={() => {
+                                    setIsOpen(false);
+                                    clerk.openSignIn();
+                                }}
+                                className={navbarStyles.mobileLoginButton}
+                            >
+                             Login       
+                                </button>
+                            </div>
+                            </SignedOut>
                         </div>
                     )}
                 </div>
+                <style>{navbarStyles.animationStyles}</style>
             </nav>
         </>
     );
