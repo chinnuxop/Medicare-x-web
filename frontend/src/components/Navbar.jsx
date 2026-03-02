@@ -1,8 +1,9 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef,useEffect } from "react";
 import { navbarStyles } from "../assets/dummyStyles";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useClerk, SignedIn, SignedOut, UserButton } from "@clerk/clerk-react";
 import { User, Key, X, Menu } from "lucide-react";
+
 const STORAGE_KEY = "doctorToken_v1";
 import logo from '../assets/logo.png'
 
@@ -22,6 +23,43 @@ const Navbar = () => {
     const clerk = useClerk();
     const navigate = useNavigate();
 
+    //Hide and show navbar on Scroll
+    useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      if (currentScrollY > lastScrollY && currentScrollY > 80) {
+        setShowNavbar(false);
+      } else {
+        setShowNavbar(true);
+      }
+      setLastScrollY(currentScrollY);
+    };
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollY]);
+
+//Sync the doctor login state
+  useEffect(() => {
+    const onStorage = (e) => {
+      if (e.key === STORAGE_KEY) {
+        setIsDoctorLoggedIn(Boolean(e.newValue));
+      }
+    };
+    window.addEventListener("storage", onStorage);
+    return () => window.removeEventListener("storage", onStorage);
+  }, []);
+
+//close the toggle menu for mobile when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (isOpen && navRef.current && !navRef.current.contains(event.target)) {
+        setIsOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, [isOpen]);
+
     const navItems = [
         { label: "Home", href: "/" },
         { label: "Doctors", href: "/doctors" },
@@ -33,8 +71,9 @@ const Navbar = () => {
     return (
         <>
             <div className={navbarStyles.navbarBorder}>
-            </div>
-            <nav className={`${navbarStyles.navbarContainer}
+            </div >
+            <nav ref={navRef} 
+            className={`${navbarStyles.navbarContainer}
          ${showNavbar ? navbarStyles.navbarVisible : navbarStyles.navbarHidden}`}>
                 <div className={navbarStyles.contentWrapper}>
                     <div className={navbarStyles.flexContainer}>
