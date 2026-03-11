@@ -5,6 +5,9 @@ import 'dotenv/config';
 
 import { clerkMiddleware } from '@clerk/express';
 import { connectDB } from './config/db.js';
+import doctorRouter from './routes/doctorRouter.js';
+import serviceRouter from "./routes/serviceRouter.js";
+import appointmentRouter from "./routes/appointmentRouter.js"
 
 const app = express();
 const port = 4000;
@@ -21,6 +24,10 @@ connectDB();
 
 
 //Routes
+app.use("/api/docotors", doctorRouter);
+app.use("/api/services", serviceRouter);
+app.use("/api/appointments" , appointmentRouter)
+
 app.get('/',(req,res)=>{
     res.send("API IS WORKING...")
     })
