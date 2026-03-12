@@ -7,7 +7,14 @@ import { clerkMiddleware } from '@clerk/express';
 import { connectDB } from './config/db.js';
 import doctorRouter from './routes/doctorRouter.js';
 import serviceRouter from "./routes/serviceRouter.js";
+<<<<<<< HEAD
 import appointmentRouter from "./routes/appointmentRouter.js"
+=======
+<<<<<<< HEAD
+=======
+import appointmentRouter from "./routes/appointmentRouter.js"
+>>>>>>> 3ae97fb (add CRUD)
+>>>>>>> 2dbf90b0632ab385d6c51d0b6f7db405000cb2a3
 
 const app = express();
 const port = 4000;
@@ -26,7 +33,14 @@ connectDB();
 //Routes
 app.use("/api/docotors", doctorRouter);
 app.use("/api/services", serviceRouter);
+<<<<<<< HEAD
 app.use("/api/appointments" , appointmentRouter)
+=======
+<<<<<<< HEAD
+=======
+app.use("/api/appointments" , appointmentRouter)
+>>>>>>> 3ae97fb (add CRUD)
+>>>>>>> 2dbf90b0632ab385d6c51d0b6f7db405000cb2a3
 
 app.get('/',(req,res)=>{
     res.send("API IS WORKING...")
