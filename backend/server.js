@@ -7,20 +7,35 @@ import { clerkMiddleware } from '@clerk/express';
 import { connectDB } from './config/db.js';
 import doctorRouter from './routes/doctorRouter.js';
 import serviceRouter from "./routes/serviceRouter.js";
-<<<<<<< HEAD
-import appointmentRouter from "./routes/appointmentRouter.js"
-=======
-<<<<<<< HEAD
-=======
-import appointmentRouter from "./routes/appointmentRouter.js"
->>>>>>> 3ae97fb (add CRUD)
->>>>>>> 2dbf90b0632ab385d6c51d0b6f7db405000cb2a3
+import appointmentRouter from "./routes/appointmentRouter.js";
+import serviceAppointmentRouter from "./routes/serviceAppointmentRouter.js";
+
+
+
 
 const app = express();
 const port = 4000;
 
+const allowedOrigin = [
+    "http://localhost:5173",
+    "http://localhost:5174"
+];
+
 //Midddlewares
-app.use(cors());
+app.use(cors(
+    {
+        origin: function (origin,callback){
+            if(!origin) return callback (null,true);
+            if(allowedOrigin.includes(origin)){
+                return callback (null,true)
+            }
+            return callback(new Error("Not allowed by CORS"))
+        },
+        credentials: true,
+        methods: ["GET","POST","PUT","DELETE","OPTIONS"],
+        allowedHeader: ["Content-Type","Authorization"]
+    }
+));
 app.use(clerkMiddleware());
 app.use(express.json({ limit:"20mb"}));
 app.use(express.urlencoded({ limit:"20mb", extended: true }))
@@ -33,14 +48,9 @@ connectDB();
 //Routes
 app.use("/api/docotors", doctorRouter);
 app.use("/api/services", serviceRouter);
-<<<<<<< HEAD
 app.use("/api/appointments" , appointmentRouter)
-=======
-<<<<<<< HEAD
-=======
-app.use("/api/appointments" , appointmentRouter)
->>>>>>> 3ae97fb (add CRUD)
->>>>>>> 2dbf90b0632ab385d6c51d0b6f7db405000cb2a3
+app.use("/api/service-appointment" ,serviceAppointmentRouter);
+
 
 app.get('/',(req,res)=>{
     res.send("API IS WORKING...")
