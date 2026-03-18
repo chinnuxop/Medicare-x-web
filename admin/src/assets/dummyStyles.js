@@ -427,7 +427,7 @@ export const doctorListStyles = {
   loadingContainer: "text-center text-emerald-600 py-8",
   noResultsContainer: "text-center text-emerald-600 py-8",
   
-  gridContainer: "max-w-6xl grid xl:grid-cols-2 lg:grid-cols-2 lg:gap-3 xl:gap-4 mx-auto space-y-4",
+  gridContainer: "max-w-6xl grid xl:grid-cols-2 lg:grid-cols-2 lg:gap-3 xl:gap-4 mx-auto items-start",
   
   article: "bg-linear-to-r from-emerald-100/50 to-white rounded-2xl shadow-md border border-emerald-100 overflow-hidden transition-all duration-300",
   articleContent: "flex flex-col sm:flex-row items-start sm:items-center gap-4 p-3 sm:p-4 md:p-5",
