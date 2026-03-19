@@ -4,6 +4,7 @@ import Hero from "./pages/Hero";
 import Home from "./pages/Home";
 import Add from "./pages/Add";
 import List from "./pages/List";
+import Appointments from "./pages/Appointments";
 import { Link } from "react-router-dom";
 import { useUser } from "@clerk/clerk-react";
 
@@ -53,6 +54,12 @@ const App = () => {
       <Route path="/list" element={
         <RequiredAuth>
           <List />
+        </RequiredAuth>
+      }
+      />
+      <Route path="/appointments" element={
+        <RequiredAuth>
+          <Appointments />
         </RequiredAuth>
       }
       />

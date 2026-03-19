@@ -63,8 +63,12 @@ export const getAppointments = async (req, res) => {
             const re = new RegExp(search, "i");
             filter.$or = [{ patientName: re }, { mobile: re }, { notes: re }];
         }
-        const items = (await Appointment.find(filter)).toSorted({ createdAt: -1 }).skip(skip).limit(limit)
-            .populate("doctorId", "name specialization owner imageurl image").lean();
+        const items = await Appointment.find(filter)
+            .sort({ createdAt: -1 })
+            .skip(skip)
+            .limit(limit)
+            .populate("doctorId", "name specialization owner imageUrl image")
+            .lean();
 
         const total = await Appointment.countDocuments(filter);
         return res.json({
@@ -523,36 +527,36 @@ export const getStats = async (req, res) => {
 
 //to getAppointment By Doctor
 
-export const getAppointmentsByDoctor = async (req,res) =>{
-try{
-const {doctorId} = req.params;
-if(!doctorId) return res.status(400).json({
-    success: false,
-    message: "Doctor Id required"
-});
-const { mobile, status, search = "", limit: limitRaw = 50, page: pageRaw = 1 } = req.query;
-    const limit = Math.min(200, Math.max(1, parseInt(limitRaw, 10) || 50));
-    const page = Math.max(1, parseInt(pageRaw, 10) || 1);
-    const skip = (page - 1) * limit;
-//filter
-    const filter = { doctorId };
-    if (mobile) filter.mobile = mobile;
-    if (status) filter.status = status;
-    if (search) {
-      const re = new RegExp(search, "i");
-      filter.$or = [{ patientName: re }, { mobile: re }, { notes: re }];
-    }
- const items = await Appointment.find(filter).sort({date: 1,time: 1}).skip(skip).limit(limit)
- .populate("doctorId","name specialization owner imageUrl image").lean();
+export const getAppointmentsByDoctor = async (req, res) => {
+    try {
+        const { doctorId } = req.params;
+        if (!doctorId) return res.status(400).json({
+            success: false,
+            message: "Doctor Id required"
+        });
+        const { mobile, status, search = "", limit: limitRaw = 50, page: pageRaw = 1 } = req.query;
+        const limit = Math.min(200, Math.max(1, parseInt(limitRaw, 10) || 50));
+        const page = Math.max(1, parseInt(pageRaw, 10) || 1);
+        const skip = (page - 1) * limit;
+        //filter
+        const filter = { doctorId };
+        if (mobile) filter.mobile = mobile;
+        if (status) filter.status = status;
+        if (search) {
+            const re = new RegExp(search, "i");
+            filter.$or = [{ patientName: re }, { mobile: re }, { notes: re }];
+        }
+        const items = await Appointment.find(filter).sort({ date: 1, time: 1 }).skip(skip).limit(limit)
+            .populate("doctorId", "name specialization owner imageUrl image").lean();
 
- const total = await Appointment.countDocuments(filter);
- return res.json({
-    success:true,
-    appointment: items,
-    meta: {page,limit,total,count: items.length}
- });
-}
-catch (err) {
+        const total = await Appointment.countDocuments(filter);
+        return res.json({
+            success: true,
+            appointment: items,
+            meta: { page, limit, total, count: items.length }
+        });
+    }
+    catch (err) {
         console.error("getAppointmentsByDoctor Error:", err);
         return res.status(500).json({ success: false, message: "Server error" });
     }
@@ -560,10 +564,10 @@ catch (err) {
 
 //to get register user count
 
-export async function getRegisteredUserCount(req,res){
-    try{
-const totalUsers = await clerkClient.users.getCount();
-return res.json({success: true,totalUsers});
+export async function getRegisteredUserCount(req, res) {
+    try {
+        const totalUsers = await clerkClient.users.getCount();
+        return res.json({ success: true, totalUsers });
     }
 
     catch (err) {
@@ -572,7 +576,7 @@ return res.json({success: true,totalUsers});
     }
 }
 
-export default{
+export default {
     getAppointments,
     getAppointmentsByPatient,
     createAppointment,
