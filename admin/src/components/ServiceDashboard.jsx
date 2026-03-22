@@ -349,7 +349,7 @@ const ServiceDashboard = ({ services: servicesProp = null }) => {
                         </div>
                     ) : (
                         visibleServices.map((s) => {
-                            const earning = s.completed + s.price;
+                            const earning = s.completed * s.price;
                             return (
                                 <div key={s.id} className={serviceDashboardStyles.table.row}>
                                     {/*fro tablet */}
