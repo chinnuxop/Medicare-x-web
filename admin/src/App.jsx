@@ -4,6 +4,7 @@ import Hero from "./pages/Hero";
 import Home from "./pages/Home";
 import Add from "./pages/Add";
 import List from "./pages/List";
+import AddSer from "./pages/AddSer";
 import SetDashboard  from "./pages/SetDashboard";
 import Appointments from "./pages/Appointments";
 import { Link } from "react-router-dom";
@@ -67,6 +68,12 @@ const App = () => {
       <Route path="/service-dashboard" element={
         <RequiredAuth>
           <SetDashboard />
+        </RequiredAuth>
+      }
+      />
+       <Route path="/add-service" element={
+        <RequiredAuth>
+          <AddSer />
         </RequiredAuth>
       }
       />
