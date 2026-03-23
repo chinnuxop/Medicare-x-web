@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import Add from "./pages/Add";
 import List from "./pages/List";
 import AddSer from "./pages/AddSer";
+import ListService from "./pages/ListService";
 import SetDashboard  from "./pages/SetDashboard";
 import Appointments from "./pages/Appointments";
 import { Link } from "react-router-dom";
@@ -74,6 +75,12 @@ const App = () => {
        <Route path="/add-service" element={
         <RequiredAuth>
           <AddSer />
+        </RequiredAuth>
+      }
+      />
+      <Route path="/list-service" element={
+        <RequiredAuth>
+          <ListService />
         </RequiredAuth>
       }
       />
