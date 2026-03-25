@@ -265,7 +265,7 @@ const ServiceAppointmentPage = () => {
     setLoading(true);
     setError(null);
     try {
-      const url = `${API_BASE}/api/service-appointments?limit=500`;
+      const url = `${API_BASE}/api/service-appointment?limit=500`;
       const res = await fetch(url);
       if (!res.ok) {
         const body = await res.json().catch(() => ({}));
