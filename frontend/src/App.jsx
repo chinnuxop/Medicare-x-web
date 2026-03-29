@@ -9,6 +9,7 @@ import Contact from "./pages/Contact";
 import Login from "./components/LoginPage";
 import DHome from "./pages/DHome";
 import List from "./doctor/List";
+import EditProfile from "./doctor/EditProfile";
 
 function App() {
   return (
@@ -25,6 +26,8 @@ function App() {
       <Route path="/doctor-admin/login" element={<Login />} />
       <Route path="/doctor-admin/:id" element={<DHome />} />
       <Route path="/doctor-admin/:id/appointments" element={<List />} />
+
+      <Route path="/doctor-admin/:id/profile/edit" element={<EditProfile />} />
 
     </Routes>
   )
