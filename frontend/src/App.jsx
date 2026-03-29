@@ -10,6 +10,7 @@ import Login from "./components/LoginPage";
 import DHome from "./pages/DHome";
 import List from "./doctor/List";
 import EditProfile from "./doctor/EditProfile";
+import Appointments from "./pages/Appointments";
 
 function App() {
   return (
@@ -21,8 +22,9 @@ function App() {
       <Route path="/services" element={<Service />} />
       <Route path="/services/:id" element={<ServiceDetailPage />} />
 
+      <Route path="/appointments" element={<Appointments />} />
       <Route path="/contact" element={<Contact />} />
-
+      {/* Doctor */}
       <Route path="/doctor-admin/login" element={<Login />} />
       <Route path="/doctor-admin/:id" element={<DHome />} />
       <Route path="/doctor-admin/:id/appointments" element={<List />} />
