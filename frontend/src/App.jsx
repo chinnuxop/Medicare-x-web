@@ -8,6 +8,7 @@ import ServiceDetailPage from "./pages/ServiceDetailPage";
 import Contact from "./pages/Contact";
 import Login from "./components/LoginPage";
 import DHome from "./pages/DHome";
+import List from "./doctor/List";
 
 function App() {
   return (
@@ -16,13 +17,14 @@ function App() {
       <Route path="/doctors" element={<Doctors />} />
       <Route path="/doctors/:id" element={<DoctorDetail />} />
 
-       <Route path="/services" element={<Service />} />
-       <Route path="/services/:id" element={<ServiceDetailPage />} />
+      <Route path="/services" element={<Service />} />
+      <Route path="/services/:id" element={<ServiceDetailPage />} />
 
-       <Route path="/contact" element={<Contact />} />
+      <Route path="/contact" element={<Contact />} />
 
-       <Route path="/doctor-admin/login" element={<Login />} />
-        <Route path="/doctor-admin/:id" element={<DHome />} />
+      <Route path="/doctor-admin/login" element={<Login />} />
+      <Route path="/doctor-admin/:id" element={<DHome />} />
+      <Route path="/doctor-admin/:id/appointments" element={<List />} />
 
     </Routes>
   )
