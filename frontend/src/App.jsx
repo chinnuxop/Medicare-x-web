@@ -5,6 +5,7 @@ import Doctors from "./pages/Doctors";
 import DoctorDetail from "./pages/DoctorDetail";
 import Service from "./pages/Service";
 import ServiceDetailPage from "./pages/ServiceDetailPage";
+import Contact from "./pages/Contact";
 
 function App() {
   return (
@@ -15,6 +16,8 @@ function App() {
 
        <Route path="/services" element={<Service />} />
        <Route path="/services/:id" element={<ServiceDetailPage />} />
+
+       <Route path="/contact" element={<Contact />} />
     </Routes>
   )
 }
