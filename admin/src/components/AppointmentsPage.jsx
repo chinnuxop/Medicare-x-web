@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useMemo } from 'react'
 import { pageStyles, statusClasses, keyframesStyles } from '../assets/dummyStyles';
-import { Calendar, Search } from "lucide-react";
+import { Calendar, Search ,BadgeIndianRupee} from "lucide-react";
 
 const API_BASE = "http://localhost:4000";
 
@@ -64,7 +64,7 @@ const AppointmentsPage = () => {
                     throw new Error(body?.message || `Failed to fetch (${res.status})`);
                 }
                 const data = await res.json();
-                const items = (data?.appointments || []).map((a) => {
+                const items = (data?.appointment|| []).map((a) => {
                     const doctorName =
                         (a.doctorId && a.doctorId.name) || a.doctorName || "";
                     const speciality =
@@ -288,7 +288,7 @@ const AppointmentsPage = () => {
                 ) : (
                     <main className={pageStyles.gridContainer}>
                         {displayed.map((a, idx) => {
-                            const statusLower = (s.status || "").toLowerCase();
+                            const statusLower = (a.status || "").toLowerCase();
                             const isCancelled =
                                 statusLower === "canceled" || statusLower === "cancelled";
                             const isCompleted = statusLower === "completed";
