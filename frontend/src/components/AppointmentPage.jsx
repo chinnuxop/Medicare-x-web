@@ -15,7 +15,7 @@ import { Toaster } from "react-hot-toast";
 import { useAuth, useUser } from "@clerk/clerk-react";
 
 const API_BASE = 'http://localhost:4000';
-const API = axios.create({ baseUrl: API_BASE });
+const API = axios.create({ baseURL: API_BASE });
 
 //helper function
 function pad(n) {
@@ -262,11 +262,11 @@ const AppointmentPage = () => {
             console.error("Failed to get Clerk token (frontend): err", err);
         }
         const headers = token ? { Authorization: `Bearer ${token}` } : {};
-        console.log("Outgoing headers for /api/service-appointments/me:", headers);
+        console.log("Outgoing headers for /api/service-appointment/me:", headers);
 
         try {
-            const resp = await API.get("/api/service-appointments/me", { headers });
-            console.log("Response from /api/service-appointments/me:", resp?.data);
+            const resp = await API.get("/api/service-appointment/me", { headers });
+            console.log("Response from /api/service-appointment/me:", resp?.data);
 
             const fetched =
                 resp?.data?.appointments ?? resp?.data?.data ?? resp?.data ?? [];
@@ -277,7 +277,7 @@ const AppointmentPage = () => {
             setAppointmentsRaw((p) => ({ ...p, services: arr }));
         } catch (err) {
             console.error(
-                "Error calling /api/service-appointments/me:",
+                "Error calling /api/service-appointment/me:",
                 err?.response?.data || err.message || err,
             );
 
@@ -285,7 +285,7 @@ const AppointmentPage = () => {
                 try {
                     console.log("Attempting debug request with ?createdBy=", user.id);
                     const debugResp = await API.get(
-                        `/api/service-appointments/me?createdBy=${user.id}`,
+                        `/api/service-appointment/me?createdBy=${user.id}`,
                         { headers },
                     );
                     console.log("Debug fallback response (services):", debugResp?.data);

@@ -362,7 +362,7 @@ const ServiceAppointmentPage = () => {
     pushToast("Updating status", `Appointment #${id} → ${newStatus}`);
 
     try {
-      const res = await fetch(`${API_BASE}/api/service-appointments/${id}`, {
+      const res = await fetch(`${API_BASE}/api/service-appointment/${id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ status: newStatus }),
@@ -445,7 +445,7 @@ const ServiceAppointmentPage = () => {
     );
 
     try {
-      const res = await fetch(`${API_BASE}/api/service-appointments/${id}`, {
+      const res = await fetch(`${API_BASE}/api/service-appointment/${id}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -521,7 +521,7 @@ const ServiceAppointmentPage = () => {
 
     try {
       const res = await fetch(
-        `${API_BASE}/api/service-appointments/${id}/cancel`,
+        `${API_BASE}/api/service-appointment/${id}/cancel`,
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },

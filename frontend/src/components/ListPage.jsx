@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useMemo } from "react";
 import { listPageStyles } from "../assets/dummyStyles";
 import { useParams } from "react-router-dom";
-import { Search, X, Calendar } from "lucide-react";
+import { Search, X, Calendar,Phone } from "lucide-react";
 
 const API_BASE = 'http://localhost:4000';
 
@@ -324,8 +324,8 @@ const ListPage = () => {
                 );
             }
             const body = await res.json();
-            const list = Array.isArray(body.appointments)
-                ? body.appointments
+            const list = Array.isArray(body.appointment)
+                ? body.appointment
                 : Array.isArray(body)
                     ? body
                     : (body.items ?? body.data ?? []);

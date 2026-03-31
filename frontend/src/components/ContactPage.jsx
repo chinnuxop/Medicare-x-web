@@ -110,7 +110,7 @@ const ContactPage = () => {
             }\nPhone: ${form.phone}\nDepartment: ${form.department || "N/A"
             }\nService: ${form.service || "N/A"}\nMessage: ${form.message}`;
 
-        const url = `https://wa.me/8328967636?text=${encodeURIComponent(text)}`;
+        const url = `https://wa.me/7847871230?text=${encodeURIComponent(text)}`;
         window.open(url, "_blank");
 
         setForm(initial);

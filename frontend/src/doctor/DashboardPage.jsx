@@ -171,8 +171,8 @@ export default function DashboardPage({ apiBase }) {
         );
       }
       const body = await res.json();
-      const list = Array.isArray(body.appointments)
-        ? body.appointments
+      const list = Array.isArray(body.appointment)
+        ? body.appointment
         : Array.isArray(body)
           ? body
           : (body.items ?? body.data ?? []);

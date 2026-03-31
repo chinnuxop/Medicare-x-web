@@ -105,7 +105,7 @@ export const getAppointmentsByPatient = async (req, res) => {
         if (resolvedCreatedBy) filter.createdBy = resolvedCreatedBy;
         if (req.query.mobile) filter.mobile = req.query.mobile;
 
-        const appointments = await getAppointmentsByPatient.find(filter).sort({ date: 1, time: 1 }).lean();
+        const appointments = await Appointment.find(filter).sort({ date: 1, time: 1 }).lean();
         return res.json({
             success: true,
             appointments

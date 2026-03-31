@@ -336,7 +336,7 @@ export default function ServiceDetail() {
         return;
       }
 
-      const res = await fetch(`${DEFAULT_HOST}/api/service-appointments`, {
+      const res = await fetch(`${DEFAULT_HOST}/api/service-appointment`, {
         method: "POST",
         headers,
         body: JSON.stringify(payload),

@@ -85,7 +85,7 @@ const App = () => {
         </RequiredAuth>
       }
       />
-      <Route path="/service-appointments" element={
+      <Route path="/service-appointment" element={
         <RequiredAuth>
           <ServiceAppointments />
         </RequiredAuth>

@@ -211,7 +211,7 @@ const Navbar = () => {
                     icon={<List size={16} />}
                   />
                   <CenterNavItem
-                    to="/service-appointments"
+                    to="/service-appointment"
                     label="Service Appointments"
                     icon={<Calendar size={16} />}
                   />
@@ -292,7 +292,7 @@ const Navbar = () => {
                 onClick={() => setOpen(false)}
               />
               <MobileItem
-                to="/service-appointments"
+                to="/service-appointment"
                 label="Service Appointments"
                 icon={<Calendar size={16} />}
                 onClick={() => setOpen(false)}

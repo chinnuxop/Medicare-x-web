@@ -478,24 +478,24 @@ export const getServiceAppointmentStats = async (req, res) => {
 }
 
 // to get appointment for the patient
-export const getServiceAppointmentsByPatient = async (req,res) =>{
-    try{
-const clerkUserId = resolveClerkUserId(req);
-const {createdBy,mobile} = req.query;
-const resolvedCreatedBy = createBy || clerkUserId || null;
-if (resolvedCreatedBy && !mobile)({
-    success: true,
-    data: []
-});
-const filter = {};
-if(resolvedCreatedBy) filter.createBy = resolvedCreatedBy;
-if(mpbile) filter.mobile = mobile;
+export const getServiceAppointmentsByPatient = async (req, res) => {
+    try {
+        const clerkUserId = resolveClerkUserId(req);
+        const { createdBy, mobile } = req.query;
+        const resolvedCreatedBy = createdBy || clerkUserId || null;
+        if (resolvedCreatedBy && !mobile) ({
+            success: true,
+            data: []
+        });
+        const filter = {};
+        if (resolvedCreatedBy) filter.createdBy = resolvedCreatedBy;
+        if (mobile) filter.mobile = mobile;
 
-const list = await ServiceAppointment.find(filter).sort({ createdAt: -1}).lean()
-return res.json({
-    success: true,
-    data: list
-});
+        const list = await ServiceAppointment.find(filter).sort({ createdAt: -1 }).lean()
+        return res.json({
+            success: true,
+            data: list
+        });
     }
     catch (err) {
         console.error("getServiceAppointmentsByPatient Error:", err);
@@ -503,14 +503,14 @@ return res.json({
     }
 }
 export default {
-  createServiceAppointment,
-  confirmServicePayment,
-  getServiceAppointments,
-  getServiceAppointmentById,
-  updateServiceAppointment,
-  cancelServiceAppointment,
-  getServiceAppointmentStats,
-  getServiceAppointmentsByPatient,
+    createServiceAppointment,
+    confirmServicePayment,
+    getServiceAppointments,
+    getServiceAppointmentById,
+    updateServiceAppointment,
+    cancelServiceAppointment,
+    getServiceAppointmentStats,
+    getServiceAppointmentsByPatient,
 };
 
 
