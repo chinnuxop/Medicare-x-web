@@ -3,7 +3,7 @@ import { listPageStyles } from "../assets/dummyStyles";
 import { useParams } from "react-router-dom";
 import { Search, X, Calendar,Phone } from "lucide-react";
 
-const API_BASE = 'http://localhost:4000';
+const API_BASE = 'https://medicare-backend-jy3b.onrender.com';
 
 function parseDateTime(date, time) {
     return new Date(`${date}T${time}:00`);

@@ -4,7 +4,7 @@ import { User, AlertTriangle, Clock, XCircle, Plus, Trash2, CheckCircle, Image,C
 
 
 const AddService = ({ serviceId }) => {
-    const API_BASE = 'http://localhost:4000';
+    const API_BASE = 'https://medicare-backend-jy3b.onrender.com';
     const fileRef = useRef(null);
     const [imagePreview, setImagePreview] = useState(null);
     const [imageFile, setImageFile] = useState(null);
