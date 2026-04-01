@@ -17,8 +17,8 @@ const app = express();
 const port = 4000;
 
 const allowedOrigin = [
-    "http://localhost:5173",
-    "http://localhost:5174"
+    "https://medicare-frontend-jfe6.onrender.com",
+    "https://medicare-admin-jg4x.onrender.com"
 ];
 
 //Midddlewares
