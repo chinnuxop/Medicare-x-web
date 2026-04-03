@@ -1,6 +1,8 @@
 🏥 Medicare – Full Stack Healthcare Platform
 🌐 Live Demo
 🚀 Frontend: https://medicare-frontend-jfe6.onrender.com
+
+
 ⚙️ Admin Panel: https://medicare-admin-jg4x.onrender.com
 
 📌 About the Project
@@ -90,16 +92,14 @@ Render → Deployment
 📸 Screenshots
 🏠 Home Page
 <img width="879" height="717" alt="Screenshot 2026-04-03 221644" src="https://github.com/user-attachments/assets/fff4f15e-ca89-4930-8e7c-f9dbd4cf7627" />
-<img width="879" height="717" alt="Screenshot 2026-04-03 221644" src="https://github.com/user-attachments/assets/fff4f15e-ca89-4930-8e7c-f9dbd4cf7627" />
+
 
 
 🩺 Doctor Admin
 <img width="1433" height="866" alt="Screenshot 2026-04-03 221958" src="https://github.com/user-attachments/assets/90da5dd6-44e8-4425-999e-978e0a2c54b6" />
-<img width="1433" height="866" alt="Screenshot 2026-04-03 221958" src="https://github.com/user-attachments/assets/90da5dd6-44e8-4425-999e-978e0a2c54b6" />
 
 
 🧑‍💼 Admin Panel
-<img width="1588" height="821" alt="Screenshot 2026-04-03 222032" src="https://github.com/user-attachments/assets/2dae4af0-04ac-4a16-bd25-c88b1782f044" />
 <img width="1588" height="821" alt="Screenshot 2026-04-03 222032" src="https://github.com/user-attachments/assets/2dae4af0-04ac-4a16-bd25-c88b1782f044" />
 
 
