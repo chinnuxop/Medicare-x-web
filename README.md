@@ -1,49 +1,46 @@
 🏥 Medicare – Full Stack Healthcare Platform
+<p align="center"> 🚀 A Complete Healthcare Appointment & Service Booking System </p> <p align="center"> <img src="https://img.shields.io/badge/Frontend-React-blue?style=for-the-badge&logo=react" /> <img src="https://img.shields.io/badge/Backend-Node.js-green?style=for-the-badge&logo=node.js" /> <img src="https://img.shields.io/badge/Database-MongoDB-darkgreen?style=for-the-badge&logo=mongodb" /> <img src="https://img.shields.io/badge/Payments-Stripe-purple?style=for-the-badge&logo=stripe" /> <img src="https://img.shields.io/badge/Auth-Clerk-orange?style=for-the-badge" /> <img src="https://img.shields.io/badge/Deploy-Render-black?style=for-the-badge" /> </p>
 🌐 Live Demo
 🚀 Frontend: https://medicare-frontend-jfe6.onrender.com
-
-
 ⚙️ Admin Panel: https://medicare-admin-jg4x.onrender.com
 
 📌 About the Project
-Medicare is a full-stack healthcare appointment booking platform that connects patients with doctors and healthcare services.
+Medicare is a full-stack healthcare platform designed to streamline doctor appointments and service bookings.
 
-It provides a secure, scalable, and user-friendly system where users can book appointments, make payments, and manage healthcare services efficiently.
+It includes Admin, Doctor, and Service dashboards with secure payments and authentication — making it a real-world SaaS-level project.
 
-✨ Key Features
-👤 Patient Side
-🔍 Search & filter doctors and services
+✨ Features Overview
+👤 Patient
+🔍 Search doctors & services
 
-📅 Book appointments in real-time
+📅 Book appointments
 
-💳 Secure online payments using Stripe
+💳 Pay securely via Stripe
 
-🔐 Authentication using Clerk
-
-📱 Fully responsive UI
+🔐 Login with Clerk
 
 👨‍⚕️ Doctor Dashboard
-📅 View assigned appointments
+📅 Manage appointments
 
-🧾 Access patient details
+🧾 View patient details
 
 ✅ Accept / ❌ Reject bookings
 
-📊 Manage availability & schedule
+📊 Set availability
 
-✏️ Edit personal profile (name, specialization, fees, etc.)
+✏️ Edit profile & fees
 
-🖼️ Upload / update profile image
+🖼️ Upload profile image
 
 🧑‍💼 Admin Dashboard
 🩺 Doctor Management
-➕ Add / Delete doctors
+➕ Add / ❌ Delete doctors
 
 🏥 Service Management
-➕ Add / Edit / Manage services
+➕ Add / ✏️ Edit / 📋 Manage services
 
 📅 Appointment Management
-📋 View all appointments (doctor + service)
+📋 View all appointments
 
 ❌ Approve / Cancel bookings
 
@@ -51,57 +48,33 @@ It provides a secure, scalable, and user-friendly system where users can book ap
 Manage users and system data
 
 💳 Payment System
-✔️ Stripe payment integration
+✔️ Stripe integration
 
 ✔️ Secure checkout flow
 
-🔐 Authentication & Security
-Clerk authentication
+🔐 Security
+Clerk Authentication
 
-Role-Based Access Control (Admin / Doctor / User)
+Role-Based Access Control (RBAC)
 
-Protected routes
+Protected Routes
 
 Secure API handling
 
 🧑‍💻 Tech Stack
-🚀 Frontend
-React.js
-
-HTML, CSS, JavaScript
-
-Axios
-
-⚙️ Backend
-Node.js
-
-Express.js
-
-🗄️ Database
-MongoDB (Mongoose)
-
-🔧 Tools
-Clerk → Authentication
-
-Stripe → Payments
-
-Cloudinary → Image Upload
-
-Render → Deployment
+Category	Tech
+Frontend	React.js, HTML, CSS, JavaScript
+Backend	Node.js, Express.js
+Database	MongoDB
+Auth	Clerk
+Payment	Stripe
+Storage	Cloudinary
+Deploy	Render
 
 📸 Screenshots
 🏠 Home Page
-<img width="879" height="717" alt="Screenshot 2026-04-03 221644" src="https://github.com/user-attachments/assets/fff4f15e-ca89-4930-8e7c-f9dbd4cf7627" />
-
-
-
-🩺 Doctor Admin
-<img width="1433" height="866" alt="Screenshot 2026-04-03 221958" src="https://github.com/user-attachments/assets/90da5dd6-44e8-4425-999e-978e0a2c54b6" />
-
-
+<img src="https://github.com/user-attachments/assets/fff4f15e-ca89-4930-8e7c-f9dbd4cf7627" width="100%" />
+👨‍⚕️ Doctor Dashboard
+<img src="https://github.com/user-attachments/assets/90da5dd6-44e8-4425-999e-978e0a2c54b6" width="100%" />
 🧑‍💼 Admin Panel
-<img width="1588" height="821" alt="Screenshot 2026-04-03 222032" src="https://github.com/user-attachments/assets/2dae4af0-04ac-4a16-bd25-c88b1782f044" />
-
-
-
-
+<img src="https://github.com/user-attachments/assets/2dae4af0-04ac-4a16-bd25-c88b1782f044" width="100%" />
