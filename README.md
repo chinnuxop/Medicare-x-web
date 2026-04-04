@@ -13,6 +13,9 @@
 ⚙️ Admin Panel:
 👉 https://medicare-admin-jg4x.onrender.com
 
+
+
+
 📌 About the Project:
 
 
@@ -26,7 +29,11 @@ It includes Admin, Doctor, and Service dashboards with secure payments and authe
 
 
 
+
+
 👤 Patient Features:
+
+
 
 
 
@@ -47,7 +54,12 @@ Optimized for both desktop and mobile
 
 
 
+
+
+
 👨‍⚕️ Doctor Dashboard:
+
+
 
 
 📊 Dashboard Overview
@@ -71,7 +83,12 @@ Update profile, fees,image,appointment slots and specialization
 
 
 
+
+
+
 🧑‍💼 Admin Dashboard:
+
+
 
 
 
@@ -87,6 +104,9 @@ Approve or cancel bookings
 
 👥 User Management
 Manage patient data and system users
+
+
+
 
 
 
@@ -112,6 +132,8 @@ Admin
 
 
 
+
+
 🎨 UI & Experience:
 
 
@@ -119,6 +141,8 @@ Admin
 ⚡ Fast and responsive design
 📊 Dashboard-focused user experience
 🧭 Easy navigation across all panels
+
+
 
 
 
