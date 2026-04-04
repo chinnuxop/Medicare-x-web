@@ -13,9 +13,14 @@ Medicare is a full-stack healthcare platform designed to streamline doctor appoi
 It includes Admin, Doctor, and Service dashboards with secure payments and authentication — making it a real-world SaaS-level project.
 
 ✨ Features Overview
+
+
 👤 Patient Features
+
+
 🔍 Search & Discover
-Browse doctors and healthcare services بسهولة
+
+Browse doctors and healthcare service
 
 📅 Easy Appointment Booking
 Book appointments with preferred doctors in a few clicks
