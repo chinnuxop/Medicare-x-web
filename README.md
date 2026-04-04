@@ -4,7 +4,7 @@
 <p align="center"> 🚀 A Complete Healthcare Appointment & Service Booking System </p> <p align="center"> <img src="https://img.shields.io/badge/Frontend-React-blue?style=for-the-badge&logo=react" /> <img src="https://img.shields.io/badge/Backend-Node.js-green?style=for-the-badge&logo=node.js" /> <img src="https://img.shields.io/badge/Database-MongoDB-darkgreen?style=for-the-badge&logo=mongodb" /> <img src="https://img.shields.io/badge/Payments-Stripe-purple?style=for-the-badge&logo=stripe" /> <img src="https://img.shields.io/badge/Auth-Clerk-orange?style=for-the-badge" /> <img src="https://img.shields.io/badge/Deploy-Render-black?style=for-the-badge" /> </p>
 
 
-🌐 Live Demo
+🌐 Live Demo<br>
 
 
 🚀 Frontend:
@@ -16,7 +16,7 @@
 
 
 
-📌 About the Project:
+📌 About the Project:<br>
 
 
 Medicare is a full-stack healthcare platform designed to streamline doctor appointments and service bookings.
@@ -25,13 +25,13 @@ It includes Admin, Doctor, and Service dashboards with secure payments and authe
 
 
 
-✨ Features Overview
+✨ Features Overview<br>
 
 
 
 
 
-👤 Patient Features:
+👤 Patient Features:<br>
 
 
 
@@ -54,12 +54,12 @@ Optimized for both desktop and mobile
 
 
 
-
+<br><br><br>
 
 
 👨‍⚕️ Doctor Dashboard:
 
-
+<br>
 
 
 📊 Dashboard Overview
@@ -83,14 +83,14 @@ Update profile, fees,image,appointment slots and specialization
 
 
 
-
+<br><br><br>
 
 
 🧑‍💼 Admin Dashboard:
 
 
 
-
+<br>
 
 👨‍⚕️ Doctor Management
 Add, remove, and manage doctor listings
@@ -109,19 +109,19 @@ Manage patient data and system users
 
 
 
-
+<br><br><br>
 
 💳 Payment System:
 
-
+<br>
 ✔️ Integrated Stripe payment gateway
 ✔️ Secure checkout experience
 ✔️ Real-time payment handling
 
 
-
+<br><br><br>
 🔐 Security & Access Control:
-
+<br>
 
 🔑 Clerk Authentication system
 🛡️ Role-Based Access Control (RBAC)
@@ -131,12 +131,12 @@ Doctor
 Admin
 
 
-
+<br><br><br>
 
 
 🎨 UI & Experience:
 
-
+<br>
 💚 Clean and modern healthcare-themed UI
 ⚡ Fast and responsive design
 📊 Dashboard-focused user experience
@@ -146,7 +146,7 @@ Admin
 
 
 
-🚀 Tech Stack:
+🚀 Tech Stack:<br>
 
 
 Frontend: React.js
@@ -166,11 +166,11 @@ Payments: Stripe
 
 
 Deployment: Render
-
+<br><br><br>
 
 
 📸 Screenshots
-
+<br>
 
 🏠 Home Page:
 
