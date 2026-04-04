@@ -7,7 +7,9 @@
 ⚙️ Admin Panel:
 👉 https://medicare-admin-jg4x.onrender.com
 
-📌 About the Project
+📌 About the Project:
+
+
 Medicare is a full-stack healthcare platform designed to streamline doctor appointments and service bookings.
 
 It includes Admin, Doctor, and Service dashboards with secure payments and authentication — making it a real-world SaaS-level project.
