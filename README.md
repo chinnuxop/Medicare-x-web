@@ -13,7 +13,7 @@
 ⚙️ Admin Panel:
 👉 https://medicare-admin-jg4x.onrender.com
 
-
+<br><br>
 
 
 📌 About the Project:<br>
@@ -23,18 +23,18 @@ Medicare is a full-stack healthcare platform designed to streamline doctor appoi
 
 It includes Admin, Doctor, and Service dashboards with secure payments and authentication — making it a real-world SaaS-level project.
 
+<br><br><br>
 
+✨ Features Overview:
 
-✨ Features Overview<br>
-
-
-
-
-
-👤 Patient Features:<br>
+<br><br>
 
 
 
+👤 Patient Features:
+
+
+<br>
 
 
 🔍 Search & Discover
@@ -54,7 +54,7 @@ Optimized for both desktop and mobile
 
 
 
-<br><br><br>
+<br><br><br><br>
 
 
 👨‍⚕️ Doctor Dashboard:
@@ -83,7 +83,7 @@ Update profile, fees,image,appointment slots and specialization
 
 
 
-<br><br><br>
+<br><br><br><br>
 
 
 🧑‍💼 Admin Dashboard:
@@ -115,20 +115,36 @@ Manage patient data and system users
 
 <br>
 ✔️ Integrated Stripe payment gateway
+
+
 ✔️ Secure checkout experience
+
+
 ✔️ Real-time payment handling
 
 
-<br><br><br>
+
+
+<br><br><br><br>
 🔐 Security & Access Control:
 <br>
 
 🔑 Clerk Authentication system
+
+
 🛡️ Role-Based Access Control (RBAC)
 
+
+
 Patient
+
+
 Doctor
+
+
 Admin
+
+
 
 
 <br><br><br>
@@ -143,7 +159,7 @@ Admin
 🧭 Easy navigation across all panels
 
 
-
+<br><br><br><br>
 
 
 🚀 Tech Stack:<br>
